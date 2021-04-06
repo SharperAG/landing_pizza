@@ -1,5 +1,5 @@
 @import url("variables.scss");
-
+@import url("mediaqueries.scss");
 .wrapper {
   max-width: 1170px;
   margin: 0 auto;
@@ -65,11 +65,16 @@
 
       .banner__item:nth-child(1) {
         max-width: 400px;
+        margin-left: 6rem;
+        flex-basis: 30%;
         color: #eaeaea;
         > * {
           margin-bottom: 2rem;
         }
 
+        .banner__description {
+          font-family: Roboto;
+        }
         .btn {
           color: #eaeaea;
           text-decoration: none;
@@ -86,5 +91,235 @@
         }
       }
     }
+  }
+}
+
+.main-content {
+  background-color: #eaeaea;
+  padding: 5rem 0;
+  .content__block-progress {
+    position: relative;
+    text-align: center;
+
+    .content__title {
+      font-size: 3.1rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      position: relative;
+      color: #282828;
+      display: inline-block;
+      padding-right: 128px;
+      padding-left: 128px;
+
+      &::before,
+      &::after {
+        content: "";
+        background-image: url("../Img/figur.png");
+        /*         background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat; */
+        position: absolute;
+        width: 102px;
+        height: 28px;
+        display: block;
+        top: calc(50% - 14px);
+      }
+      &::before {
+        left: 0;
+      }
+      &::after {
+        right: 0;
+      }
+    }
+    .content__description {
+      color: #959595;
+    }
+
+    .content__menu {
+      .menu__items {
+        display: flex;
+        justify-content: center;
+
+        list-style: none;
+        .menu__item {
+          display: inline-block;
+          margin-top: 2rem;
+          position: relative;
+          padding-left: 21px;
+          padding-right: 20px;
+          .content__link {
+            color: #282828;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            font-family: Monserrat;
+            font-weight: 600;
+            cursor: pointer;
+            padding-bottom: 1.1rem;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #000;
+          }
+          &:first-child::before {
+            display: none;
+          }
+
+          .current {
+            border-bottom: 4px solid #ee252d;
+          }
+
+          .current::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 0;
+            height: 0;
+            display: block;
+            border: 7px solid transparent;
+            border-bottom: 7px solid #ee252d;
+          }
+
+          /*           .current::after {
+            content: "";
+            position: absolute;
+
+            height: 5px;
+            width: 100%;
+            left: 0;
+            bottom: -20px;
+            background-color: #ee252d;
+          } */
+        }
+      }
+    }
+  }
+
+  .content__block-box {
+    margin-top: 3rem;
+    padding-bottom: 70px;
+    background: #fff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .box__item {
+      position: relative;
+
+      padding-top: 90px;
+      padding-left: 60px;
+      padding-right: 60px;
+
+      .box__item-num {
+        font-size: 8rem;
+        font-family: Roboto;
+        font-weight: 800;
+        position: relative;
+      }
+
+      .box__item-title {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+      }
+
+      .box__item-description {
+        font-family: Roboto;
+        font-size: 1.2rem;
+      }
+
+      .number-one::after {
+        content: "";
+        background-image: url("../Img/pizza-ico.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 127px;
+        height: 78px;
+        top: calc(50% - 39px);
+        position: absolute;
+      }
+
+      .number-two::after {
+        content: "";
+        margin-left: 10px;
+        background-image: url("../Img/action-pizz.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 180px;
+        height: 90px;
+        top: calc(50% - 45px);
+        position: absolute;
+      }
+      .number-three::after {
+        content: "";
+        margin-left: 20px;
+        background-image: url("../Img/social-icons.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 142px;
+        height: 78px;
+        top: calc(50% - 39px);
+        position: absolute;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 3px;
+        height: 8rem;
+        bottom: 0;
+        right: 0;
+        background-color: gray;
+      }
+
+      &:last-child::after {
+        display: none;
+      }
+    }
+  }
+
+  .content__slogan {
+    text-align: center;
+    margin: 3rem 0;
+
+    .slogan__title {
+      display: inline-block;
+      background-image: url("../Img/bg-small.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100px;
+      width: 460px;
+      font-size: 2rem;
+      font-weight: 700;
+      padding-top: 25px;
+      color: #fff;
+    }
+  }
+}
+
+.footer {
+  background-image: url("../Img/bg-main.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 5rem;
+  width: 100%;
+  text-align: center;
+  padding-top: 2.5rem;
+
+  .text__paragraph {
+    color: #fff;
+    font-size: 1.2rem;
+    font-style: Roboto;
   }
 }
