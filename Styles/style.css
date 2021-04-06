@@ -1,5 +1,5 @@
-@import url("variables.scss");
-@import url("mediaqueries.scss");
+@import url("../Styles/variables.css");
+@import url("../Styles/mediaqueries.css");
 .wrapper {
   max-width: 1170px;
   margin: 0 auto;
@@ -126,7 +126,7 @@
   text-align: center;
 }
 
-.main-content .content__block-progress .content__title {
+.main-content .content__block-progress .content-title {
   font-size: 3.1rem;
   text-transform: uppercase;
   font-weight: 600;
@@ -137,12 +137,9 @@
   padding-left: 128px;
 }
 
-.main-content .content__block-progress .content__title::before, .main-content .content__block-progress .content__title::after {
+.main-content .content__block-progress .content-title::before, .main-content .content__block-progress .content-title::after {
   content: "";
   background-image: url("../Img/figur.png");
-  /*         background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat; */
   position: absolute;
   width: 102px;
   height: 28px;
@@ -150,11 +147,11 @@
   top: calc(50% - 14px);
 }
 
-.main-content .content__block-progress .content__title::before {
+.main-content .content__block-progress .content-title::before {
   left: 0;
 }
 
-.main-content .content__block-progress .content__title::after {
+.main-content .content__block-progress .content-title::after {
   right: 0;
 }
 

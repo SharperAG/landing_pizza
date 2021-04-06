@@ -1,5 +1,5 @@
-@import url("variables.scss");
-@import url("mediaqueries.scss");
+@import url("../Styles/variables.css");
+@import url("../Styles/mediaqueries.css");
 .wrapper {
   max-width: 1170px;
   margin: 0 auto;
@@ -101,7 +101,7 @@
     position: relative;
     text-align: center;
 
-    .content__title {
+    .content-title {
       font-size: 3.1rem;
       text-transform: uppercase;
       font-weight: 600;
@@ -115,9 +115,6 @@
       &::after {
         content: "";
         background-image: url("../Img/figur.png");
-        /*         background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat; */
         position: absolute;
         width: 102px;
         height: 28px;
